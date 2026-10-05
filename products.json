@@ -1,0 +1,564 @@
+[
+  {
+    "name": "Wireless Mouse",
+    "price": 582.7,
+    "category": "electronics",
+    "tags": [
+      "premium"
+    ],
+    "stock": 125
+  },
+  {
+    "name": "USB-C Hub",
+    "price": 216.43,
+    "category": "electronics",
+    "tags": [
+      "bestseller",
+      "budget",
+      "limited"
+    ],
+    "stock": 456
+  },
+  {
+    "name": "Bluetooth Speaker",
+    "price": 499.92,
+    "category": "electronics",
+    "tags": [
+      "limited",
+      "new",
+      "imported"
+    ],
+    "stock": 47
+  },
+  {
+    "name": "Laptop Stand",
+    "price": 212.4,
+    "category": "electronics",
+    "tags": [
+      "new",
+      "premium",
+      "bestseller"
+    ],
+    "stock": 366
+  },
+  {
+    "name": "Noise-Cancelling Headphones",
+    "price": 591.9,
+    "category": "electronics",
+    "tags": [
+      "limited",
+      "bestseller",
+      "gift"
+    ],
+    "stock": 301
+  },
+  {
+    "name": "Webcam",
+    "price": 264.81,
+    "category": "electronics",
+    "tags": [
+      "eco"
+    ],
+    "stock": 357
+  },
+  {
+    "name": "Mechanical Keyboard",
+    "price": 391.9,
+    "category": "electronics",
+    "tags": [
+      "eco",
+      "bestseller"
+    ],
+    "stock": 490
+  },
+  {
+    "name": "Smartwatch",
+    "price": 691.87,
+    "category": "electronics",
+    "tags": [
+      "bestseller"
+    ],
+    "stock": 194
+  },
+  {
+    "name": "Portable SSD",
+    "price": 105.11,
+    "category": "electronics",
+    "tags": [
+      "premium",
+      "limited"
+    ],
+    "stock": 22
+  },
+  {
+    "name": "Power Bank",
+    "price": 662.16,
+    "category": "electronics",
+    "tags": [
+      "bestseller",
+      "gift",
+      "new"
+    ],
+    "stock": 282
+  },
+  {
+    "name": "Clean Code",
+    "price": 23.25,
+    "category": "books",
+    "tags": [
+      "budget",
+      "premium",
+      "bestseller"
+    ],
+    "stock": 360
+  },
+  {
+    "name": "Designing Data-Intensive Applications",
+    "price": 11.62,
+    "category": "books",
+    "tags": [
+      "gift",
+      "limited",
+      "eco"
+    ],
+    "stock": 40
+  },
+  {
+    "name": "The Pragmatic Programmer",
+    "price": 52.48,
+    "category": "books",
+    "tags": [
+      "limited"
+    ],
+    "stock": 142
+  },
+  {
+    "name": "Refactoring",
+    "price": 31.58,
+    "category": "books",
+    "tags": [
+      "eco",
+      "imported"
+    ],
+    "stock": 181
+  },
+  {
+    "name": "MongoDB: The Definitive Guide",
+    "price": 18.89,
+    "category": "books",
+    "tags": [
+      "bestseller",
+      "premium"
+    ],
+    "stock": 325
+  },
+  {
+    "name": "Atomic Habits",
+    "price": 16.9,
+    "category": "books",
+    "tags": [
+      "gift",
+      "bestseller",
+      "imported"
+    ],
+    "stock": 194
+  },
+  {
+    "name": "Dune",
+    "price": 22.04,
+    "category": "books",
+    "tags": [
+      "gift",
+      "budget",
+      "eco"
+    ],
+    "stock": 431
+  },
+  {
+    "name": "Sapiens",
+    "price": 47.95,
+    "category": "books",
+    "tags": [
+      "gift"
+    ],
+    "stock": 420
+  },
+  {
+    "name": "The Hobbit",
+    "price": 9.67,
+    "category": "books",
+    "tags": [
+      "limited",
+      "eco"
+    ],
+    "stock": 33
+  },
+  {
+    "name": "Deep Work",
+    "price": 18.97,
+    "category": "books",
+    "tags": [
+      "budget",
+      "bestseller",
+      "imported"
+    ],
+    "stock": 255
+  },
+  {
+    "name": "Running Jacket",
+    "price": 65.39,
+    "category": "clothing",
+    "tags": [
+      "imported",
+      "bestseller",
+      "eco"
+    ],
+    "stock": 71
+  },
+  {
+    "name": "Wool Sweater",
+    "price": 44.53,
+    "category": "clothing",
+    "tags": [
+      "premium",
+      "budget",
+      "imported"
+    ],
+    "stock": 219
+  },
+  {
+    "name": "Denim Jeans",
+    "price": 135.7,
+    "category": "clothing",
+    "tags": [
+      "budget",
+      "bestseller"
+    ],
+    "stock": 70
+  },
+  {
+    "name": "Rain Coat",
+    "price": 81.33,
+    "category": "clothing",
+    "tags": [
+      "new"
+    ],
+    "stock": 440
+  },
+  {
+    "name": "Hoodie",
+    "price": 25.35,
+    "category": "clothing",
+    "tags": [
+      "eco",
+      "limited",
+      "budget"
+    ],
+    "stock": 216
+  },
+  {
+    "name": "Sneakers",
+    "price": 93.5,
+    "category": "clothing",
+    "tags": [
+      "limited",
+      "premium"
+    ],
+    "stock": 239
+  },
+  {
+    "name": "Winter Gloves",
+    "price": 84.08,
+    "category": "clothing",
+    "tags": [
+      "new",
+      "budget",
+      "limited"
+    ],
+    "stock": 58
+  },
+  {
+    "name": "Beanie",
+    "price": 105.44,
+    "category": "clothing",
+    "tags": [
+      "premium",
+      "limited",
+      "budget"
+    ],
+    "stock": 174
+  },
+  {
+    "name": "Polo Shirt",
+    "price": 25.62,
+    "category": "clothing",
+    "tags": [
+      "eco",
+      "gift"
+    ],
+    "stock": 1
+  },
+  {
+    "name": "Chino Pants",
+    "price": 143.53,
+    "category": "clothing",
+    "tags": [
+      "premium",
+      "imported",
+      "bestseller"
+    ],
+    "stock": 259
+  },
+  {
+    "name": "Coffee Grinder",
+    "price": 274.23,
+    "category": "home",
+    "tags": [
+      "premium",
+      "limited",
+      "budget"
+    ],
+    "stock": 259
+  },
+  {
+    "name": "Desk Lamp",
+    "price": 184.65,
+    "category": "home",
+    "tags": [
+      "budget"
+    ],
+    "stock": 390
+  },
+  {
+    "name": "Cast Iron Pan",
+    "price": 52.66,
+    "category": "home",
+    "tags": [
+      "new",
+      "premium",
+      "eco"
+    ],
+    "stock": 250
+  },
+  {
+    "name": "Throw Blanket",
+    "price": 10.75,
+    "category": "home",
+    "tags": [
+      "premium",
+      "bestseller"
+    ],
+    "stock": 29
+  },
+  {
+    "name": "Air Purifier",
+    "price": 76.06,
+    "category": "home",
+    "tags": [
+      "bestseller",
+      "new",
+      "budget"
+    ],
+    "stock": 248
+  },
+  {
+    "name": "Kettle",
+    "price": 245.73,
+    "category": "home",
+    "tags": [
+      "eco",
+      "bestseller",
+      "budget"
+    ],
+    "stock": 243
+  },
+  {
+    "name": "Plant Pot",
+    "price": 284.32,
+    "category": "home",
+    "tags": [
+      "premium"
+    ],
+    "stock": 270
+  },
+  {
+    "name": "Wall Clock",
+    "price": 262.37,
+    "category": "home",
+    "tags": [
+      "gift",
+      "premium"
+    ],
+    "stock": 386
+  },
+  {
+    "name": "Cutting Board",
+    "price": 220.33,
+    "category": "home",
+    "tags": [
+      "premium"
+    ],
+    "stock": 204
+  },
+  {
+    "name": "Bath Towel Set",
+    "price": 298.57,
+    "category": "home",
+    "tags": [
+      "budget",
+      "gift",
+      "premium"
+    ],
+    "stock": 231
+  },
+  {
+    "name": "Yoga Mat",
+    "price": 57.19,
+    "category": "sports",
+    "tags": [
+      "bestseller"
+    ],
+    "stock": 173
+  },
+  {
+    "name": "Dumbbell Set",
+    "price": 18.2,
+    "category": "sports",
+    "tags": [
+      "gift",
+      "premium",
+      "bestseller"
+    ],
+    "stock": 3
+  },
+  {
+    "name": "Bike Helmet",
+    "price": 37.69,
+    "category": "sports",
+    "tags": [
+      "new",
+      "bestseller",
+      "imported"
+    ],
+    "stock": 463
+  },
+  {
+    "name": "Tennis Racket",
+    "price": 22.25,
+    "category": "sports",
+    "tags": [
+      "bestseller",
+      "premium"
+    ],
+    "stock": 121
+  },
+  {
+    "name": "Football",
+    "price": 118.61,
+    "category": "sports",
+    "tags": [
+      "gift",
+      "premium"
+    ],
+    "stock": 67
+  },
+  {
+    "name": "Jump Rope",
+    "price": 292.11,
+    "category": "sports",
+    "tags": [
+      "imported",
+      "bestseller",
+      "gift"
+    ],
+    "stock": 413
+  },
+  {
+    "name": "Resistance Bands",
+    "price": 168.75,
+    "category": "sports",
+    "tags": [
+      "bestseller"
+    ],
+    "stock": 337
+  },
+  {
+    "name": "Water Bottle",
+    "price": 178.11,
+    "category": "sports",
+    "tags": [
+      "limited",
+      "gift"
+    ],
+    "stock": 442
+  },
+  {
+    "name": "Hiking Backpack",
+    "price": 294.34,
+    "category": "sports",
+    "tags": [
+      "bestseller",
+      "new",
+      "gift"
+    ],
+    "stock": 372
+  },
+  {
+    "name": "Foam Roller",
+    "price": 142.33,
+    "category": "sports",
+    "tags": [
+      "gift"
+    ],
+    "stock": 98
+  },
+  {
+    "name": "MP3 Player",
+    "price": 23.07,
+    "category": "discontinued",
+    "tags": [
+      "eco",
+      "gift"
+    ],
+    "stock": 93
+  },
+  {
+    "name": "DVD Box Set",
+    "price": 31.46,
+    "category": "discontinued",
+    "tags": [
+      "bestseller"
+    ],
+    "stock": 226
+  },
+  {
+    "name": "Fax Cartridge",
+    "price": 81.76,
+    "category": "discontinued",
+    "tags": [
+      "bestseller",
+      "new",
+      "budget"
+    ],
+    "stock": 276
+  },
+  {
+    "name": "Floppy Disk Pack",
+    "price": 84.42,
+    "category": "discontinued",
+    "tags": [
+      "gift"
+    ],
+    "stock": 85
+  },
+  {
+    "name": "Pager",
+    "price": 43.61,
+    "category": "discontinued",
+    "tags": [
+      "gift",
+      "limited"
+    ],
+    "stock": 205
+  }
+]

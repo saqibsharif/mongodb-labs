@@ -1,0 +1,115 @@
+
+===================== 0. Clean start =====================
+16:37:51
+
+===================== 1. Start 3 mongod processes =====================
+16:37:54
+$ mkdir -p /home/codespace/data/db1 /home/codespace/data/db2 /home/codespace/data/db3
+$ mongod --replSet rs0 --port 27017 --dbpath /home/codespace/data/db1 --bind_ip localhost --fork --logpath /home/codespace/data/db1.log
+about to fork child process, waiting until server is ready for connections.
+forked process: 13509
+child process started successfully, parent exiting
+$ mongod --replSet rs0 --port 27018 --dbpath /home/codespace/data/db2 --bind_ip localhost --fork --logpath /home/codespace/data/db2.log
+about to fork child process, waiting until server is ready for connections.
+forked process: 13586
+child process started successfully, parent exiting
+$ mongod --replSet rs0 --port 27019 --dbpath /home/codespace/data/db3 --bind_ip localhost --fork --logpath /home/codespace/data/db3.log
+about to fork child process, waiting until server is ready for connections.
+forked process: 13662
+child process started successfully, parent exiting
+
+===================== 2. rs.initiate (27017 gets priority 2 so it is the predictable first PRIMARY) =====================
+16:37:56
+$ mongosh --port 27017 --quiet --eval 
+printjson(rs.initiate({
+  _id: "rs0",
+  members: [
+    { _id: 0, host: "localhost:27017", priority: 2 },
+    { _id: 1, host: "localhost:27018" },
+    { _id: 2, host: "localhost:27019" }
+  ]
+}))
+{
+  ok: 1,
+  '$clusterTime': {
+    clusterTime: Timestamp({ t: 1791218277, i: 1 }),
+    signature: {
+      hash: Binary.createFromBase64('AAAAAAAAAAAAAAAAAAAAAAAAAAA=', 0),
+      keyId: Long('0')
+    }
+  },
+  operationTime: Timestamp({ t: 1791218277, i: 1 })
+}
+PRIMARY is localhost:27017 (after ~10 s)
+
+===================== 3. rs.status() BEFORE failure =====================
+16:38:07
+localhost:27017    PRIMARY                      health=1
+localhost:27018    SECONDARY                    health=1
+localhost:27019    SECONDARY                    health=1
+(full output saved to rs_status_before.json)
+
+===================== 4. Write on PRIMARY (27017), read on SECONDARY (27018) =====================
+16:38:13
+$ mongosh --port 27017 --quiet --eval printjson(db.test.insertOne({ msg: "hello", at: new Date() }))
+{
+  acknowledged: true,
+  insertedId: ObjectId('6ac3d2754bba8fad218cf252')
+}
+$ mongosh --port 27018 --quiet --eval db.getMongo().setReadPref("secondary"); printjson(db.test.find().toArray())
+[
+  {
+    _id: ObjectId('6ac3d2754bba8fad218cf252'),
+    msg: 'hello',
+    at: ISODate('2026-10-05T16:38:13.850Z')
+  }
+]
+Writing directly to a SECONDARY should fail with NotWritablePrimary:
+MongoServerError: not primary
+
+===================== 5. Kill the PRIMARY (27017) and watch the election =====================
+16:38:16
+MongoNetworkError: connection 4 to 127.0.0.1:27017 closed
+(a connection error above is expected — the server just shut down)
+PRIMARY is localhost:27018 (after ~2 s)
+
+===================== rs.status() AFTER failure =====================
+16:38:33
+localhost:27017    (not reachable/healthy)      health=0
+localhost:27018    PRIMARY                      health=1
+localhost:27019    SECONDARY                    health=1
+(full output saved to rs_status_after.json)
+
+===================== Write to the NEW primary (localhost:27018) — cluster still accepts writes =====================
+16:38:34
+$ mongosh --port 27018 --quiet --eval printjson(db.test.insertOne({ msg: "written after failover", at: new Date() }))
+{
+  acknowledged: true,
+  insertedId: ObjectId('6ac3d28a2a4381e66773196f')
+}
+
+===================== Extra: restart 27017 — it rejoins, catches up, then retakes PRIMARY (priority 2) =====================
+16:38:34
+$ mongod --replSet rs0 --port 27017 --dbpath /home/codespace/data/db1 --bind_ip localhost --fork --logpath /home/codespace/data/db1.log
+about to fork child process, waiting until server is ready for connections.
+forked process: 14625
+child process started successfully, parent exiting
+localhost:27017    PRIMARY                      health=1
+localhost:27018    SECONDARY                    health=1
+localhost:27019    SECONDARY                    health=1
+$ mongosh --port 27017 --quiet --eval db.getMongo().setReadPref("primaryPreferred"); printjson(db.test.find().toArray())
+[
+  {
+    _id: ObjectId('6ac3d2754bba8fad218cf252'),
+    msg: 'hello',
+    at: ISODate('2026-10-05T16:38:13.850Z')
+  },
+  {
+    _id: ObjectId('6ac3d28a2a4381e66773196f'),
+    msg: 'written after failover',
+    at: ISODate('2026-10-05T16:38:34.582Z')
+  }
+]
+
+===================== Done =====================
+16:39:01

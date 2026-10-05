@@ -1,0 +1,223 @@
+
+=== Pipeline 1: top categories by yearly revenue ===
+[
+  {
+    _id: 'electronics',
+    revenue: 51133.28
+  },
+  {
+    _id: 'home',
+    revenue: 29109
+  },
+  {
+    _id: 'clothing',
+    revenue: 19910
+  },
+  {
+    _id: 'sports',
+    revenue: 11433
+  },
+  {
+    _id: 'books',
+    revenue: 6355.14
+  }
+]
+
+=== Pipeline 2: top 5 customers + $lookup ===
+[
+  {
+    orders: 94,
+    customerId: ObjectId('6ac3d1e23cc1e9b3769322c3'),
+    name: 'Janis Novak',
+    city: 'Daugavpils',
+    total: 41696.01
+  },
+  {
+    orders: 36,
+    customerId: ObjectId('6ac3d1e23cc1e9b3769322c4'),
+    name: 'Janis Garcia',
+    city: 'Jurmala',
+    total: 16773.58
+  },
+  {
+    orders: 35,
+    customerId: ObjectId('6ac3d1e23cc1e9b3769322c5'),
+    name: 'Karlis Berzins',
+    city: 'Tallinn',
+    total: 16061.66
+  },
+  {
+    orders: 14,
+    customerId: ObjectId('6ac3d1e23cc1e9b3769322d9'),
+    name: 'Anna Ozola',
+    city: 'Tallinn',
+    total: 8978.93
+  },
+  {
+    orders: 19,
+    customerId: ObjectId('6ac3d1e23cc1e9b3769322cb'),
+    name: 'Omar Lacis',
+    city: 'Jurmala',
+    total: 7781.81
+  }
+]
+
+Querying customerId = 6ac3d1e23cc1e9b3769322c6
+
+=== BEFORE index: find({customerId}) ===
+{
+  winningPlanStages: 'COLLSCAN',
+  nReturned: 13,
+  totalKeysExamined: 0,
+  totalDocsExamined: 600,
+  executionTimeMillis: 0
+}
+
+=== BEFORE index: find({customerId}).sort({orderDate:-1}) ===
+{
+  winningPlanStages: 'SORT <- COLLSCAN',
+  nReturned: 13,
+  totalKeysExamined: 0,
+  totalDocsExamined: 600,
+  executionTimeMillis: 0
+}
+
+=== createIndex {customerId:1, orderDate:-1} ===
+customerId_1_orderDate_-1
+
+=== AFTER index: find({customerId}) ===
+{
+  winningPlanStages: 'FETCH <- IXSCAN',
+  nReturned: 13,
+  totalKeysExamined: 13,
+  totalDocsExamined: 13,
+  executionTimeMillis: 1
+}
+
+=== AFTER index: find({customerId}).sort({orderDate:-1}) — note: no SORT stage ===
+{
+  winningPlanStages: 'FETCH <- IXSCAN',
+  nReturned: 13,
+  totalKeysExamined: 13,
+  totalDocsExamined: 13,
+  executionTimeMillis: 0
+}
+
+--- Full executionStats BEFORE (for the report) ---
+{
+  executionSuccess: true,
+  nReturned: 13,
+  executionTimeMillis: 0,
+  totalKeysExamined: 0,
+  totalDocsExamined: 600,
+  executionStages: {
+    isCached: false,
+    stage: 'COLLSCAN',
+    filter: {
+      customerId: {
+        '$eq': ObjectId('6ac3d1e23cc1e9b3769322c6')
+      }
+    },
+    nReturned: 13,
+    executionTimeMillisEstimate: 0,
+    works: 601,
+    advanced: 13,
+    needTime: 587,
+    needYield: 0,
+    saveState: 0,
+    restoreState: 0,
+    isEOF: 1,
+    direction: 'forward',
+    docsExamined: 600
+  }
+}
+
+--- Full executionStats AFTER (for the report) ---
+{
+  executionSuccess: true,
+  nReturned: 13,
+  executionTimeMillis: 1,
+  totalKeysExamined: 13,
+  totalDocsExamined: 13,
+  executionStages: {
+    isCached: false,
+    stage: 'FETCH',
+    nReturned: 13,
+    executionTimeMillisEstimate: 0,
+    works: 14,
+    advanced: 13,
+    needTime: 0,
+    needYield: 0,
+    saveState: 0,
+    restoreState: 0,
+    isEOF: 1,
+    docsExamined: 13,
+    alreadyHasObj: 0,
+    inputStage: {
+      stage: 'IXSCAN',
+      nReturned: 13,
+      executionTimeMillisEstimate: 0,
+      works: 14,
+      advanced: 13,
+      needTime: 0,
+      needYield: 0,
+      saveState: 0,
+      restoreState: 0,
+      isEOF: 1,
+      keyPattern: {
+        customerId: 1,
+        orderDate: -1
+      },
+      indexName: 'customerId_1_orderDate_-1',
+      isMultiKey: false,
+      multiKeyPaths: {
+        customerId: [],
+        orderDate: []
+      },
+      isUnique: false,
+      isSparse: false,
+      isPartial: false,
+      indexVersion: 2,
+      direction: 'forward',
+      indexBounds: {
+        customerId: [
+          "[ObjectId('6ac3d1e23cc1e9b3769322c6'), ObjectId('6ac3d1e23cc1e9b3769322c6')]"
+        ],
+        orderDate: [
+          '[MaxKey, MinKey]'
+        ]
+      },
+      keysExamined: 13,
+      seeks: 1,
+      dupsTested: 0,
+      dupsDropped: 0
+    }
+  }
+}
+
+=== createIndex TTL on sessions.createdAt ===
+createdAt_1
+
+=== insert session ===
+{
+  acknowledged: true,
+  insertedId: ObjectId('6ac3d1e4d91b57b79d746bf5')
+}
+
+=== sessions right after insert ===
+[
+  {
+    _id: ObjectId('6ac3d1e4d91b57b79d746bf5'),
+    userId: 'u1',
+    createdAt: ISODate('2026-10-05T16:35:48.386Z')
+  }
+]
+  0 s: still 1 doc(s)…
+  15 s: still 1 doc(s)…
+  30 s: still 1 doc(s)…
+  45 s: still 1 doc(s)…
+  60 s: still 1 doc(s)…
+  75 s: still 1 doc(s)…
+
+=== sessions after 90 s (expect []) ===
+[]

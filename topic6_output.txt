@@ -1,0 +1,843 @@
+
+=== Total products imported ===
+55
+
+=== Q1 price 50..200 ===
+[
+  {
+    name: 'Portable SSD',
+    price: 105.11
+  },
+  {
+    name: 'The Pragmatic Programmer',
+    price: 52.48
+  },
+  {
+    name: 'Running Jacket',
+    price: 65.39
+  },
+  {
+    name: 'Denim Jeans',
+    price: 135.7
+  },
+  {
+    name: 'Rain Coat',
+    price: 81.33
+  },
+  {
+    name: 'Winter Gloves',
+    price: 84.08
+  },
+  {
+    name: 'Sneakers',
+    price: 93.5
+  },
+  {
+    name: 'Beanie',
+    price: 105.44
+  },
+  {
+    name: 'Chino Pants',
+    price: 143.53
+  },
+  {
+    name: 'Desk Lamp',
+    price: 184.65
+  },
+  {
+    name: 'Cast Iron Pan',
+    price: 52.66
+  },
+  {
+    name: 'Air Purifier',
+    price: 76.06
+  },
+  {
+    name: 'Yoga Mat',
+    price: 57.19
+  },
+  {
+    name: 'Football',
+    price: 118.61
+  },
+  {
+    name: 'Resistance Bands',
+    price: 168.75
+  },
+  {
+    name: 'Water Bottle',
+    price: 178.11
+  },
+  {
+    name: 'Foam Roller',
+    price: 142.33
+  },
+  {
+    name: 'Floppy Disk Pack',
+    price: 84.42
+  },
+  {
+    name: 'Fax Cartridge',
+    price: 81.76
+  }
+]
+
+=== Q2 category in [electronics, books] ===
+[
+  {
+    name: 'Wireless Mouse',
+    category: 'electronics'
+  },
+  {
+    name: 'Bluetooth Speaker',
+    category: 'electronics'
+  },
+  {
+    name: 'USB-C Hub',
+    category: 'electronics'
+  },
+  {
+    name: 'Laptop Stand',
+    category: 'electronics'
+  },
+  {
+    name: 'Noise-Cancelling Headphones',
+    category: 'electronics'
+  },
+  {
+    name: 'Webcam',
+    category: 'electronics'
+  },
+  {
+    name: 'Mechanical Keyboard',
+    category: 'electronics'
+  },
+  {
+    name: 'Smartwatch',
+    category: 'electronics'
+  },
+  {
+    name: 'Portable SSD',
+    category: 'electronics'
+  },
+  {
+    name: 'Clean Code',
+    category: 'books'
+  },
+  {
+    name: 'Designing Data-Intensive Applications',
+    category: 'books'
+  },
+  {
+    name: 'The Pragmatic Programmer',
+    category: 'books'
+  },
+  {
+    name: 'Refactoring',
+    category: 'books'
+  },
+  {
+    name: 'Power Bank',
+    category: 'electronics'
+  },
+  {
+    name: 'MongoDB: The Definitive Guide',
+    category: 'books'
+  },
+  {
+    name: 'Atomic Habits',
+    category: 'books'
+  },
+  {
+    name: 'Dune',
+    category: 'books'
+  },
+  {
+    name: 'Sapiens',
+    category: 'books'
+  },
+  {
+    name: 'Deep Work',
+    category: 'books'
+  },
+  {
+    name: 'The Hobbit',
+    category: 'books'
+  }
+]
+
+=== Q3 electronics under 500 ===
+[
+  {
+    name: 'Bluetooth Speaker',
+    price: 499.92
+  },
+  {
+    name: 'USB-C Hub',
+    price: 216.43
+  },
+  {
+    name: 'Laptop Stand',
+    price: 212.4
+  },
+  {
+    name: 'Webcam',
+    price: 264.81
+  },
+  {
+    name: 'Mechanical Keyboard',
+    price: 391.9
+  },
+  {
+    name: 'Portable SSD',
+    price: 105.11
+  }
+]
+
+=== Q4 sorted by price desc, skip 10, limit 5 ===
+[
+  {
+    name: 'Coffee Grinder',
+    price: 274.23
+  },
+  {
+    name: 'Webcam',
+    price: 264.81
+  },
+  {
+    name: 'Wall Clock',
+    price: 262.37
+  },
+  {
+    name: 'Kettle',
+    price: 245.73
+  },
+  {
+    name: 'Cutting Board',
+    price: 220.33
+  }
+]
+
+=== Q5 tagged 'bestseller' ===
+[
+  {
+    name: 'USB-C Hub',
+    tags: [
+      'bestseller',
+      'budget',
+      'limited'
+    ]
+  },
+  {
+    name: 'Laptop Stand',
+    tags: [
+      'new',
+      'premium',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Noise-Cancelling Headphones',
+    tags: [
+      'limited',
+      'bestseller',
+      'gift'
+    ]
+  },
+  {
+    name: 'Mechanical Keyboard',
+    tags: [
+      'eco',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Smartwatch',
+    tags: [
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Clean Code',
+    tags: [
+      'budget',
+      'premium',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Power Bank',
+    tags: [
+      'bestseller',
+      'gift',
+      'new'
+    ]
+  },
+  {
+    name: 'MongoDB: The Definitive Guide',
+    tags: [
+      'bestseller',
+      'premium'
+    ]
+  },
+  {
+    name: 'Atomic Habits',
+    tags: [
+      'gift',
+      'bestseller',
+      'imported'
+    ]
+  },
+  {
+    name: 'Deep Work',
+    tags: [
+      'budget',
+      'bestseller',
+      'imported'
+    ]
+  },
+  {
+    name: 'Running Jacket',
+    tags: [
+      'imported',
+      'bestseller',
+      'eco'
+    ]
+  },
+  {
+    name: 'Denim Jeans',
+    tags: [
+      'budget',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Chino Pants',
+    tags: [
+      'premium',
+      'imported',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Throw Blanket',
+    tags: [
+      'premium',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Kettle',
+    tags: [
+      'eco',
+      'bestseller',
+      'budget'
+    ]
+  },
+  {
+    name: 'Air Purifier',
+    tags: [
+      'bestseller',
+      'new',
+      'budget'
+    ]
+  },
+  {
+    name: 'Yoga Mat',
+    tags: [
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Dumbbell Set',
+    tags: [
+      'gift',
+      'premium',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Bike Helmet',
+    tags: [
+      'new',
+      'bestseller',
+      'imported'
+    ]
+  },
+  {
+    name: 'Jump Rope',
+    tags: [
+      'imported',
+      'bestseller',
+      'gift'
+    ]
+  },
+  {
+    name: 'Resistance Bands',
+    tags: [
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Tennis Racket',
+    tags: [
+      'bestseller',
+      'premium'
+    ]
+  },
+  {
+    name: 'Hiking Backpack',
+    tags: [
+      'bestseller',
+      'new',
+      'gift'
+    ]
+  },
+  {
+    name: 'DVD Box Set',
+    tags: [
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Fax Cartridge',
+    tags: [
+      'bestseller',
+      'new',
+      'budget'
+    ]
+  }
+]
+
+=== Q6 tags contain both 'eco' and 'gift' ===
+[
+  {
+    name: 'Designing Data-Intensive Applications',
+    tags: [
+      'gift',
+      'limited',
+      'eco'
+    ]
+  },
+  {
+    name: 'Dune',
+    tags: [
+      'gift',
+      'budget',
+      'eco'
+    ]
+  },
+  {
+    name: 'Polo Shirt',
+    tags: [
+      'eco',
+      'gift'
+    ]
+  },
+  {
+    name: 'MP3 Player',
+    tags: [
+      'eco',
+      'gift'
+    ]
+  }
+]
+
+=== Q7 stock = 0 OR price < 15 ===
+[
+  {
+    name: 'Designing Data-Intensive Applications',
+    price: 11.62,
+    stock: 40
+  },
+  {
+    name: 'The Hobbit',
+    price: 9.67,
+    stock: 33
+  },
+  {
+    name: 'Throw Blanket',
+    price: 10.75,
+    stock: 29
+  }
+]
+
+=== Q8 name starts with W ===
+[
+  {
+    name: 'Wireless Mouse'
+  },
+  {
+    name: 'Webcam'
+  },
+  {
+    name: 'Wool Sweater'
+  },
+  {
+    name: 'Winter Gloves'
+  },
+  {
+    name: 'Wall Clock'
+  },
+  {
+    name: 'Water Bottle'
+  }
+]
+
+=== Q9 exactly 3 tags ===
+[
+  {
+    name: 'Bluetooth Speaker',
+    tags: [
+      'limited',
+      'new',
+      'imported'
+    ]
+  },
+  {
+    name: 'USB-C Hub',
+    tags: [
+      'bestseller',
+      'budget',
+      'limited'
+    ]
+  },
+  {
+    name: 'Laptop Stand',
+    tags: [
+      'new',
+      'premium',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Noise-Cancelling Headphones',
+    tags: [
+      'limited',
+      'bestseller',
+      'gift'
+    ]
+  },
+  {
+    name: 'Clean Code',
+    tags: [
+      'budget',
+      'premium',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Designing Data-Intensive Applications',
+    tags: [
+      'gift',
+      'limited',
+      'eco'
+    ]
+  },
+  {
+    name: 'Power Bank',
+    tags: [
+      'bestseller',
+      'gift',
+      'new'
+    ]
+  },
+  {
+    name: 'Atomic Habits',
+    tags: [
+      'gift',
+      'bestseller',
+      'imported'
+    ]
+  },
+  {
+    name: 'Dune',
+    tags: [
+      'gift',
+      'budget',
+      'eco'
+    ]
+  },
+  {
+    name: 'Deep Work',
+    tags: [
+      'budget',
+      'bestseller',
+      'imported'
+    ]
+  },
+  {
+    name: 'Running Jacket',
+    tags: [
+      'imported',
+      'bestseller',
+      'eco'
+    ]
+  },
+  {
+    name: 'Wool Sweater',
+    tags: [
+      'premium',
+      'budget',
+      'imported'
+    ]
+  },
+  {
+    name: 'Hoodie',
+    tags: [
+      'eco',
+      'limited',
+      'budget'
+    ]
+  },
+  {
+    name: 'Winter Gloves',
+    tags: [
+      'new',
+      'budget',
+      'limited'
+    ]
+  },
+  {
+    name: 'Beanie',
+    tags: [
+      'premium',
+      'limited',
+      'budget'
+    ]
+  },
+  {
+    name: 'Chino Pants',
+    tags: [
+      'premium',
+      'imported',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Coffee Grinder',
+    tags: [
+      'premium',
+      'limited',
+      'budget'
+    ]
+  },
+  {
+    name: 'Cast Iron Pan',
+    tags: [
+      'new',
+      'premium',
+      'eco'
+    ]
+  },
+  {
+    name: 'Kettle',
+    tags: [
+      'eco',
+      'bestseller',
+      'budget'
+    ]
+  },
+  {
+    name: 'Air Purifier',
+    tags: [
+      'bestseller',
+      'new',
+      'budget'
+    ]
+  },
+  {
+    name: 'Bath Towel Set',
+    tags: [
+      'budget',
+      'gift',
+      'premium'
+    ]
+  },
+  {
+    name: 'Dumbbell Set',
+    tags: [
+      'gift',
+      'premium',
+      'bestseller'
+    ]
+  },
+  {
+    name: 'Bike Helmet',
+    tags: [
+      'new',
+      'bestseller',
+      'imported'
+    ]
+  },
+  {
+    name: 'Jump Rope',
+    tags: [
+      'imported',
+      'bestseller',
+      'gift'
+    ]
+  },
+  {
+    name: 'Hiking Backpack',
+    tags: [
+      'bestseller',
+      'new',
+      'gift'
+    ]
+  },
+  {
+    name: 'Fax Cartridge',
+    tags: [
+      'bestseller',
+      'new',
+      'budget'
+    ]
+  }
+]
+
+=== Q10 low-stock sports items (<100) ===
+[
+  {
+    name: 'Dumbbell Set',
+    stock: 3
+  },
+  {
+    name: 'Football',
+    stock: 67
+  },
+  {
+    name: 'Foam Roller',
+    stock: 98
+  }
+]
+
+=== Electronics BEFORE +10% ===
+[
+  {
+    name: 'Wireless Mouse',
+    price: 582.7
+  },
+  {
+    name: 'Bluetooth Speaker',
+    price: 499.92
+  },
+  {
+    name: 'USB-C Hub',
+    price: 216.43
+  }
+]
+
+=== updateMany $mul 1.10 ===
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 10,
+  modifiedCount: 10,
+  upsertedCount: 0
+}
+
+=== Electronics AFTER +10% ===
+[
+  {
+    name: 'Wireless Mouse',
+    price: 640.9700000000001
+  },
+  {
+    name: 'Bluetooth Speaker',
+    price: 549.912
+  },
+  {
+    name: 'USB-C Hub',
+    price: 238.07300000000004
+  }
+]
+
+=== Target product for $addToSet ===
+{
+  _id: ObjectId('6ac3d1c867c8d480f07eea73'),
+  name: 'Clean Code',
+  price: 23.25,
+  category: 'books',
+  tags: [
+    'budget',
+    'premium',
+    'bestseller'
+  ],
+  stock: 360
+}
+
+=== updateOne $addToSet 'sale' ===
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+=== updateOne $addToSet 'sale' again (modifiedCount should be 0) ===
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+
+=== Target after ===
+{
+  _id: ObjectId('6ac3d1c867c8d480f07eea73'),
+  name: 'Clean Code',
+  tags: [
+    'budget',
+    'premium',
+    'bestseller',
+    'sale'
+  ]
+}
+
+=== createIndex stock.productId unique ===
+productId_1
+
+=== Upsert #1 (insert) ===
+{
+  acknowledged: true,
+  insertedId: ObjectId('6ac3d1ca81a953443a47122a'),
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 1
+}
+
+=== Upsert #2 (update) ===
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+=== stock document ===
+[
+  {
+    _id: ObjectId('6ac3d1ca81a953443a47122a'),
+    productId: ObjectId('6ac3d1c867c8d480f07eea73'),
+    quantity: 40
+  }
+]
+
+=== Count 'discontinued' BEFORE ===
+5
+
+=== deleteMany discontinued ===
+{
+  acknowledged: true,
+  deletedCount: 5
+}
+
+=== Count 'discontinued' AFTER (expect 0) ===
+0
+
+=== Total products now ===
+50
